@@ -13,7 +13,7 @@ import DiscordUtils
 import json
 from aiohttp import request
 import aiohttp
-import bcrpyt
+import bcrpyt # https://www.makeuseof.com/encrypt-password-in-python-bcrypt/
 
 db = None
 
