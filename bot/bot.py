@@ -13,6 +13,7 @@ import DiscordUtils
 import json
 from aiohttp import request
 import aiohttp
+import bcrpyt
 
 db = None
 
