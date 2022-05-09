@@ -1,0 +1,4 @@
+git+https://github.com/nextcord/nextcord/
+asyncpg==0.21.0
+DiscordUtils
+dataclasses
