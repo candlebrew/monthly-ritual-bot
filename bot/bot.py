@@ -14,6 +14,7 @@ import json
 from aiohttp import request
 import aiohttp
 import bcrpyt # https://www.makeuseof.com/encrypt-password-in-python-bcrypt/
+from config.sql import *
 # https://github.com/pyca/bcrypt/
 
 db = None
