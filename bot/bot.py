@@ -34,7 +34,7 @@ client = discord.Client()
 intents = discord.Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix="prefix!", intents=intents, db=db)
+bot = commands.Bot(command_prefix=["m.","m!","m,","p.","p!","p,"], intents=intents, db=db)
 
 ## Code Here ----------------------------------------------------------
 
