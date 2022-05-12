@@ -1,12 +1,66 @@
-# Instructions
-A template for loading a bot made in DiscordPy to Heroku including the Postgres add-on.
+# Monthly Ritual Bot
+A Discord bot made using Nextcord, PostgreSQL, and Heroku, for tracking all your monthly activities--both real and fictional. It is as HIPAA-compliant and anonymous as possible. Your data will never be sold or given without your consent, and you have the tools to completely erase or lock your data from access.
 
 ## 0. Table of Contents
-1. Main References
-2. Essential Commands
-3. Repository Directory
-4. Deployment Steps
-5. Additional Information
+1. Usage Instructions & Commands
+2. Database Design
+3. Hosting a Private Copy
+4. Why did I make this?
+
+## 1. Usage Instructions & Commands
+
+
+## 2. Database Design
+screenshots here
+
+## 3. Hosting a Private Copy
+To host a private copy, you'll need to have or make the following:
+1. An email address.
+2. A Discord account, if you don't have one already.
+3. A Discord server. If privacy/anonymity is your concern, make a private server with only yourself in it.
+4. A Heroku account.
+5. A credit or debit card. This hasn't been tested with Visa gift cards; if you try, please let me know!
+    1. YOU DO NOT NEED TO PAY ANYTHING. This is just Heroku's requirement for using a full 1000 hours per month.
+6. A Discord developer account.
+7. A Github account.
+
+You will also need to install the following on your computer:
+1. Git
+2. Github Desktop
+3. Heroku CLI
+
+### Github Setup
+
+### Discord Setup
+
+### Heroku Setup
+
+##4. Why did I make this?
+In the United States, Roe v. Wade is a Supreme Court ruling from 1973 that ruled that the Constitution protects a person's right to access medical treatment and procedures within the privacy of their medical community, without outside interference or restriction. This most notably protects a female's right to obtain an abortion, no matter their reason.
+
+Roe v. Wade is under threat of being overturned. If it is overturned, many laws across the country will immediately become active in multiple states, some allowing pregnant people to be criminally prosecuted should they miscarriage or need an abortion in order to save their life.
+
+Many people with wombs are--understandably--distrustful that their period tracking apps may be used against them. It's already been found that [some period tracking apps share their data with Facebook](https://www.buzzfeednews.com/article/meghara/period-tracker-apps-facebook-maya-mia-fem). [Missouri officials have been found to track periods of patients](https://www.thecut.com/2019/10/missouri-official-tracked-womens-periods.html). Victims facing partner abuse may suffer from manipulation or even be forced to become pregnant through deceptive use of condoms should their partners have access to their period--and thus, ovulation--information.
+
+Privacy of health information such as your menstrual cycle is of [the utmost importance now more than ever](https://www.theguardian.com/world/2019/apr/13/theres-a-dark-side-to-womens-health-apps-menstrual-surveillance). Using a Discord bot is not the most convenient, compared to an app or even a calendar. But you can type a simple command and delete all of your data. You do not have an obvious app on your phone.
+
+The bot automatically deletes your messages when you type a command, so there will not be an obvious record of what you have input. The terminology the bot uses is not obviously indicative of being related to menstruation.
+
+And, most importantly: ***anyone can, and should, use it.*** This isn't period specific. You can get reminders to drink water, or take your meds. You can track other monthly appointments; maybe you want to record your monthly therapy sessions, or log your D&D sessions, or record your HRT shots.
+
+The more people who use this bot for things other than period tracking, the more there is plausible deniability for those who do.
+
+### Legal Disclaimer
+This bot does not assist people in getting abortions. It does not provide information on how to get an abortion.
+
+***DO NOT*** store any personally-identifying information in this app! It uses only your Discord user ID to identify you--keep it that way! While Heroku is HIPAA-compliant, Discord is not. Therefore, *please do not* record information such as what medications you are taking, who your doctor is, where you go for medical procedures, or even what medical procedures you have.
+
+While this bot provides labels that can easily be used to track specific activities such as period, menstruation, and engaging in sex, users are not required to use the correct label for the information they are recording. Therefore, as the creator, I have no way to verify that user information is accurately logged.
+
+
+
+
+
 
 ## 1. Main References
 * [Heroku database webUI](https://data.heroku.com/)
