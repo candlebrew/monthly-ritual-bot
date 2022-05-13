@@ -14,28 +14,39 @@ import json
 from aiohttp import request
 import aiohttp
 import bcrpyt # https://www.makeuseof.com/encrypt-password-in-python-bcrypt/
-from config.sql import *
 # https://github.com/pyca/bcrypt/
+from config.sql import *
 
 db = None
+dbTimer = None
+dbAlert = None
+
+prefixList = ["m.","m!","m,","p.","p!","p,"]
 
 ## Connecting the DB ----------------------------------------------------------
 async def run():
     global db
+    global dbTimer
+    global dbAlert
     
     dbURL = os.environ.get('DATABASE_URL')
     db = await asyncpg.connect(dsn=dbURL, ssl='require')
+    dbTimer = await asyncpg.connect(dsn=dbURL, ssl='require')
+    dbAlert = await asyncpg.connect(dsn=dbURL, ssl='require')
+    
+    for i in [userDataTableSQL,prefTableSQL,symptomsTableSQL,encountersTableSQL,defaultTermsTableSQL,customTermsTableSQL]: # found in config.sql
+        await db.execute(i)
     
 ## Bot Setup ----------------------------------------------------------
     
-token = os.environ.get('DISCORD_BOT_TOKEN') # This is hosted on HEROKU
+token = os.environ.get('DISCORD_BOT_TOKEN') # This is hosted on Heroku
 
 client = discord.Client()
 
 intents = discord.Intents.default()
 intents.members = True
 
-bot = commands.Bot(command_prefix=["m.","m!","m,","p.","p!","p,"], intents=intents, db=db)
+bot = commands.Bot(command_prefix=prefixList, intents=intents, db=db, dbTimer=dbTimer, dbAlert=dbAlert)
 
 ## Code Here ----------------------------------------------------------
 
